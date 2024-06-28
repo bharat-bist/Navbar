@@ -1,0 +1,91 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav
+{
+    height: 80px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+}
+nav .logo
+{
+    font-size: 33px;
+    color: #fff;
+    font-weight: 600;
+}
+nav ul
+{
+    display: flex;
+    list-style: none;
+    gap: 18px;
+    transition: all 2s ease;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+nav ul li a:hover,
+nav ul li a.active
+{
+    background-color: #fff;
+    border-radius: 8px;
+    color: black;
+    padding: 5px;
+}
+#click
+{
+    display: none;
+}
+#click:checked ~ ul
+{
+    left: 0px;
+}
+section
+{
+    height: 500px;
+    background-color: green;
+    
+}
+
+@media(max-width:900px)
+{
+    nav ul 
+    {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 400px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #click:checked ~ .menu-btn i::before
+    {
+        content: "\f00d";
+    }
+    nav ul li
+    {
+        margin: 40px 0;
+    }
+    
+    nav .menu-btn
+{
+    color: #fff;
+    font-size: 22px;
+    display: block;
+    cursor: pointer;
+}
+
+
+}
